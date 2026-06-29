@@ -1,23 +1,27 @@
 #include "receipt.hpp"
 
-// TODO: Return the sum of all three item prices.
 double calculateSubtotal(double item1, double item2, double item3) {
-    return 0.0;
+    // just add them all up
+    double temp_sub = item1 + item2 + item3;
+    return temp_sub; 
 }
 
-// TODO: Return the sales tax for the subtotal using TAX_RATE.
 double calculateTax(double subtotal) {
-    return 0.0;
+    double the_tax;
+    // TAX_RATE comes from the hpp file
+    the_tax = subtotal * TAX_RATE;
+    return the_tax;
 }
 
-// TODO: Return the tip amount.
-// Example: if subtotal is 20.00 and tipPercent is 15,
-// the tip should be 3.00.
 double calculateTip(double subtotal, double tipPercent) {
-    return 0.0;
+    // gotta divide by 100 to get the decimal
+    double decimalTip = tipPercent / 100.0;
+    return subtotal * decimalTip; 
 }
 
-// TODO: Return the final total.
 double calculateTotal(double subtotal, double tax, double tip) {
-    return 0.0;
+    double final_amount = 0.0;
+    final_amount = subtotal + tax + tip;
+    
+    return final_amount;
 }
