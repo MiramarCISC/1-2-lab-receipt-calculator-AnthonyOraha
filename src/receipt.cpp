@@ -1,27 +1,18 @@
 #include "receipt.hpp"
 
 double calculateSubtotal(double item1, double item2, double item3) {
-    // just add them all up
-    double temp_sub = item1 + item2 + item3;
-    return temp_sub; 
+    return item1 + item2 + item3; // AnthonyOraha: Uses less lines of code and decreases number of variables
 }
 
 double calculateTax(double subtotal) {
-    double the_tax;
-    // TAX_RATE comes from the hpp file
-    the_tax = subtotal * TAX_RATE;
-    return the_tax;
+    return subtotal*TAX_RATE; // AnthonyOraha: Uses less lines of code and decreases number of variables
 }
 
 double calculateTip(double subtotal, double tipPercent) {
     // gotta divide by 100 to get the decimal
-    double decimalTip = tipPercent / 100.0;
-    return subtotal * decimalTip; 
+    return subtotal * (tipPercent/100.0); // AnthonyOraha: Uses less lines of code and decreases number of variables
 }
 
 double calculateTotal(double subtotal, double tax, double tip) {
-    double final_amount = 0.0;
-    final_amount = subtotal + tax + tip;
-    
-    return final_amount;
+    return subtotal + tax + tip; // AnthonyOraha: Uses less lines of code and decreases number of variables
 }
